@@ -9,11 +9,21 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			 if (arr.length < 2 || new Set(arr).size === 1) {
+        return -Infinity;
+    }
+
+    // Sort the array in descending order
+    arr.sort((a, b) => b - a);
+ 
+    // Find the second-highest element
+    let secondHighestElement = arr[1];
+    
+    return secondHighestElement;
 			
 		}
 
-		function Main() {
+		function Main() { 
 			var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
